@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  /*var colors*/
+  --beige: hsl(23, 51%, 91%);
+  --ligther-beige: hsl(23, 90%, 97%);
+  --brown: rgb(77, 50, 31);
+  --pink: hsl(350, 65%, 59%);
+  background-color: var(--ligther-beige);
+  font-family: "roboto", sans-serif;
+  animation: fade-in 0.75s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 50%;
+  }
+}
+
+header {
+  align-items: center;
+  background-color: var(--beige);
+  border-radius: 0 0 24px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 18px 20px 18px;
+  width: 100%;
+  z-index: 1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky+.content {
+  padding-top: 274px;
+}
+
+h1 {
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 900;
+  margin-left: 12px;
+  color: var(--brown);
+}
+
+h1::after {
+  position: relative;
+  font-size: 36px;
+  content: ". .";
+  right: 20px;
+  bottom: 26px;
+}
+
+#header-img {
+  width: 45px;
+}
+
+#logo-icon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+li a {
+  align-items: center;
+  color: var(--brown);
+  font-size: 22px;
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.5s, font-weight 0.25s;
+}
+
+li {
+  margin: 16px;
+}
+
+li a:hover {
+  color: var(--pink);
+  font-weight: 800;
+}
+
+.content {
+  display: flex;
+  max-width: 768px;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 75px 24px 0px 24px;
+}
+
+.markup {
+  color: var(--pink);
+  font-weight: 600;
+}
+
+h2 {
+  align-self: center;
+  color: var(--brown);
+  font-size: 54px;
+  margin: 0px 0 8px 0;
+}
+
+#p-intro {
+  background-color: white;
+  border-radius: 18px;
+  font-size: 18px;
+  margin: 28px 0 32px 0;
+  padding: 18px 12px 18px 12px;
+}
+
+.div-icon-section {
+  align-self: center;
+  align-items: center;
+  background-color: var(--beige);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width: 175px;
+  height: 175px;
+
+}
+
+.icon-section {
+  width: 160px;
+}
+
+p {
+  font-size: 18px;
+  margin: 20px 0 20px 0;
+}
+
+#group-coffee-delivery {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.icon-group {
+  filter: saturate(1.5);
+  position: relative;
+  width: 135px;
+  margin-bottom: 16px;
+}
+
+.icon-with-text {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--beige);
+  flex-direction: column;
+  margin: 12px;
+  width: 145px;
+  height: 145px;
+}
+
+#video {
+  border: 15px solid var(--beige);
+  border-radius: 8px;
+  box-shadow: 20px 20px 1px #412b1a,
+    -20px -20px 1px #593a24;
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin: 18px auto;
+}
+#plans-varieties{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.plan-card ul{
+  padding: 24px 0 24px 0;
+}
+.plan-card li{
+  text-align: left;
+  font-size: 18px;
+  margin: 16px;
+}
+.plan-card li::before{  
+  align-self: flex-start;
+  content: "\2713";
+  font-family: 'Roboto';
+  margin-right: 16px;
+}
+.plan-card{
+  display: flex;
+  align-items: center;
+  align-self: center;
+  background-color: var(--beige);
+  border: 6px solid var(--pink);
+  border-radius: 18px;
+  flex-direction: column;
+  padding: 24px;
+  margin: auto;
+  margin-top: 6px;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.price{
+  color: var(--beige);
+  background-color: var(--brown);
+  border-radius: 40px;
+  padding: 0 14px 0 14px;
+}
+h4{
+  color: var(--brown);
+  font-size: 28px;
+  font-weight: 00;
+}
+.img-card{
+  width: 90px;
+  margin: 42px 0 16px 0 ;
+}
+#form {
+  margin: auto;
+}
+
+#email {
+  border: 1px solid var(--brown);
+  border-radius: 4px;
+  color: var(--brown);
+  font-family: monospace;
+  margin: 0 14px 0 0;
+  padding: 8px;
+  transition: background-color 0.5s;
+}
+#email:focus{
+    color: var(--beige);
+    border: 1px solid var(--beige);
+    background-color: var(--brown);
+    font-family: monospace;
+    margin: 0 14px 0 0;
+    padding: 8px;
+  }
+input:focus::placeholder{
+    color: var(--beige);
+}
+
+#submit {
+  background-color: var(--brown);
+  background-color: var(--ligther-beige);
+  border: 1px solid var(--brown);
+  border-radius: 4px;
+  font-family: monospace;
+  color: var(--brown);
+  padding: 8px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#submit:hover {
+  background-color: var(--brown);
+  color: var(--ligther-beige);
+}
+
+footer {
+  background-color: var(--brown);
+  border-radius: 24px 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  padding: 48px 0 24px 0;
+  height: fit-content;
+  width: 100%;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 32px 24px 32px 24px;
+  width: 180px;
+  justify-content: space-between;
+}
+
+.logo-social-media {
+  filter: invert();
+  width: 50px;
+  border-radius: 50%;
+  height: auto;
+  transition: background 1s;
+}
+
+.logo-social-media:hover {
+  background-color: #5a88a5;
+}
+
+#instagram {
+  border-radius: 16px;
+}
+
+h5 {
+  font-family: monospace;
+  font-size: 16px;
+  color: var(--beige);
+  text-align: center;
+}
+
+h6, a{
+  font-family: monospace;
+  font-size: 14px;
+  color: var(--beige);
+  text-align: center;
+}
+
+#freeCodeCamp{
+  transition: color 0.25s;
+}
+#freeCodeCamp:hover{
+  color: var(--pink);
+}
+
+@media (min-width:680px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 10px 64px 10px 64px
+  }
+
+  .sticky+.content {
+    padding-top: 130px;
+  }
+
+  #logo-icon {
+    margin: 0;
+    width: auto;
+    float: left;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 0 0 32px;
+    width: fit-content;
+  }
+
+  .content {
+    max-width: 768px;
+  }
+
+  #video {
+    width: 426px;
+    height: 240px;
+  }
+  .plan-card{
+    width: 49.5%;
+  }
+
+  #last-card{
+    min-width: 100%;
+  }
+
+  .icon-group {
+    width: 190px;
+  }
+  
+  .icon-with-text {
+    width: 185px;
+    height: 185px;
+  }
+  
+}

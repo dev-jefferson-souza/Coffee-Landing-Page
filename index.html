@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="./assets/cup.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Coffee for Ü</title>
+</head>
+<!--User Story #1: My product landing page should have a header element with a corresponding id="header".
+
+User Story #2: I can see an image within the header element with a corresponding id="header-img". A company logo would make a good image here.
+
+User Story #3: Within the #header element I can see a nav element with a corresponding id="nav-bar".
+
+User Story #4: I can see at least three clickable elements inside the nav element, each with the class nav-link.
+
+User Story #5: When I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page.
+
+User Story #6: I can watch an embedded product video with id="video".
+
+User Story #7: My landing page has a form element with a corresponding id="form".
+
+User Story #8: Within the form, there is an input field with id="email" where I can enter an email address.
+
+User Story #9: The #email input field should have placeholder text to let the user know what the field is for.
+
+User Story #10: The #email input field uses HTML5 validation to confirm that the entered text is an email address.
+
+User Story #11: Within the form, there is a submit input with a corresponding id="submit".
+
+User Story #12: When I click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).
+
+User Story #13: The navbar should always be at the top of the viewport.
+
+User Story #14: My product landing page should have at least one media query.
+
+User Story #15: My product landing page should utilize CSS flexbox at least once.-->
+
+<body>
+  <header id="header">
+    <div id="logo-icon">
+      <img id="header-img" src="./assets/cup.png" alt="logo">
+      <h1>Coffee for U</h1>
+  </div>
+    <nav id="nav-bar">
+      <ul>
+        <li><a class="a-nav" href="#home">Home</a></li>
+        <li><a class="a-nav" href="#plans">Plans</a></li>
+        <li><a class="a-nav" href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="content" id="home">
+    <h2>The best coffee delivered to your home</h2>
+    <p>You don't need to go to a coffee shop anymore. With our plans we deliver the best coffee directly to your home.</p>
+    <div id="group-coffee-delivery">
+      <div class="icon-with-text">
+        <img id="coffe-shop-img" class="icon-group" src="./assets/coffee-shop.png" alt="">
+        <h3>You <span class="markup">don't need</span> it </div>
+      <div class="icon-with-text">
+        <img id="coffe-shop-img" class="icon-group" src="./assets/delivery-man.png" alt="">
+        <h3>When you have it</h3>
+      </div>
+    </div>
+  </section>
+  <section class="content">
+    <h2>Coffee isn't just coffee, it is art</h2>
+    <p>Produced with lots of love, fresh coffee beans straight to your table.</p>
+    <iframe src="https://www.youtube.com/embed/TEH_kNy5Ebk?controls=0&loop=1&showinfo=0&rel=0&modestbranding=1" id="video" frameborder="0"></iframe>
+  </section>
+  <section class="content" id="plans">
+    <h2>Our plans</h2>
+    <section id="plans-varieties" class="content">
+      <div class="plan-card">
+        <h4>Basic</h4>
+        <ul>
+          <li>2x Packs of 500g</li>
+          <hr>
+          <li>1x Custom mug</li>
+          <hr>
+          <li>Imported grains 250g</li>
+          <hr>
+          <li>40x Coffee capsules</li>
+        </ul>
+        <img class="img-card" src="./assets/coffee-beans.png" alt="">
+          <h4><span class="price">$20</span></h4>
+      </div>
+      <div class="plan-card">
+        <h4>Lover</h4>
+        <ul>
+          <li>4x Packs of 500g</li>
+          <hr>
+          <li>2x Custom mug</li>
+          <hr>
+          <li>Imported grains 500g</li>
+          <hr>
+          <li>60x Coffee capsules</li>
+        </ul>
+        <img class="img-card" src="./assets/pack-beans.png" alt="">
+          <h4><span class="price">$40</span></h4>
+      </div>
+      <div class="plan-card" id="last-card">
+        <h4>Family</h4>
+        <ul>
+          <li>5x Packs of 500g</li>
+          <hr>
+          <li>4x Custom mug</li>
+          <hr>
+          <li>Imported grains 1Kg</li>
+          <hr>
+          <li>100x Coffee capsules</li>
+        </ul>
+        <img class="img-card" src="./assets/coffee-machine.png" alt="">
+          <h4><span class="price">$60</span></h4>
+      </div>
+    </section>
+    <section class="content">
+      <h2>Will you stay out of this one?</h2>
+      <p>Hire our service and receive the <span class="markup">best coffees</span> directly at your home. <br>
+        Leave us your email and we will contact you as soon as possible.</p>
+      <form action="" id="form">
+        <label for="email">  <input type="email" id="email"  placeholder="Email" required></label>
+        <input type="submit" id="submit">
+      </form>
+    </section>
+      <section class="content" id="about">
+      <h2>Do you know Coffee for U?</h2> 
+      <p id="p-intro">We are a company that provide a coffee sales service. Every month we send a box containing packages of coffee with the <span class="markup">best quality</span> beans to your home.</p> 
+      <div class="div-icon-section">
+        <img class="icon-section" src="./assets/coffee-with-cup.png" alt="">
+      </div>
+      </section>
+  </section>
+  <footer>
+    <h5>Page made by Jefferson Souza &copy;</h5>
+    <section class="social-media">
+      <a href="https://www.instagram.com/bad7k_/"><img class="logo-social-media" id="instagram" src="./assets/logos/logo-instagram.png" alt=""></a>
+      <a href="https://github.com/bad7k"><img class="logo-social-media" src="./assets/logos/logo-github.png" alt=""></a>
+    </section>
+    <h6>Project made for <a id="freeCodeCamp" href="freecodecamp.org">FreeCodeCamp</a></h6>
+  </footer>
+</body>
+<script src="script.js">src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"</script>
+</html>
